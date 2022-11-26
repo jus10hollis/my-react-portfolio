@@ -1,9 +1,11 @@
 import React from 'react';
 import { projects } from '../utils/projects';
+import { Project } from './Project';
 
-export const Portfolio = ({}) => {
+export const Portfolio = () => {
     return <section>
-        {projects.map(project => <Project {...projects}/>)}
+        <h1>Portfolio</h1>
+        {projects.map(project => <Project {...projects}/>) }
     </section>
 }
 
