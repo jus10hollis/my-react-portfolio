@@ -4,6 +4,8 @@ import { Footer } from './components/Footer';
 import { Header } from './components/Header';
 import { Nav } from './components/Nav';
 import { Portfolio } from './components/Portfolio';
+import { Contact } from './components/pages/Contact';
+import { Resume } from './components/pages/Resume';
 
 
 const pages = [
@@ -22,12 +24,12 @@ function App() {
         return <About />;
       case pages[1].name:
         return <Portfolio />;
-      // case pages[2].name:
-      //   return <Contact />;
-      // case pages[3].name:
-      //   return <Resume />;
-      // default:
-      //   return <About />;
+      case pages[2].name:
+        return <Contact />;
+      case pages[3].name:
+        return <Resume />;
+      default:
+        return <About />;
     }
   };
 
