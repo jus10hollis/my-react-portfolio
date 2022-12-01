@@ -1,11 +1,27 @@
-import React from 'react';
-import { Document } from 'react-pdf'
+import React, { useState } from 'react';
+import { pdfjs } from 'react-pdf';
+import { Document, Page } from 'react-pdf/dist/esm/entry.webpack5';
 
+export function Resume() {
+  pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
+  const [numPages, setNumPages] = useState(null);
+  const [pageNumber] = useState(1);
 
-export const Resume = () => {
+  function onDocumentLoadSuccess({ numPages }) {
+    setNumPages(numPages);
+  }
+
   return (
-    <section className='d-flex justify-content-center p-22 m-5'>
-      <Document file="./images/Resume_Justin_Hollis.pdf" />
-    </section>
+    <div className='d-flex justify-content-center'>
+      <Document
+        file='HollisJustin_Resume.pdf'
+        onLoadSuccess={onDocumentLoadSuccess}
+      >
+        <Page pageNumber={pageNumber} />
+      </Document>
+      <p>
+        Page {pageNumber} of {numPages}
+      </p>
+    </div>
   );
-};
+}

@@ -8,6 +8,7 @@ import { Contact } from './components/pages/Contact';
 import { Resume } from './components/pages/Resume';
 
 
+
 const pages = [
   { name: 'About' },
   { name: 'Portfolio' },
@@ -17,6 +18,7 @@ const pages = [
 
 function App() {
   const [page, setPage] = useState(pages[0]);
+  
 
   const currentPage = () => {
     switch (page.name) {
