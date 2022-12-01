@@ -3,7 +3,7 @@ import React from 'react';
 export const About = ({ pages }) => {
   return (
     <section>
-      <h1 className='fs-1 fw-bold d-flex justify-content-center'>
+      <h1 className='fs-1 fw-bold d-flex justify-content-center p-5'>
         About me
       </h1>
       <main className='m-5'>
