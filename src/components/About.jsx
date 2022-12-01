@@ -6,8 +6,8 @@ export const About = ({ pages }) => {
       <h1 className='fs-1 fw-bold d-flex justify-content-center p-5'>
         About me
       </h1>
-      <main className='m-5'>
-        <p className='mb-5 justify-content-center p-22'>
+      <main className='m-5 px-5'>
+        <p className='mb-5 px-5 fs-5 justify-content-center'>
           Justin specializes in policy research, demography, data science, and
           economic analysis. Justin is a 2022 recipient of the Wilder Foundation's Kingston
           Fellowship and plans to obtain a Full Stack Web Development
@@ -18,7 +18,7 @@ export const About = ({ pages }) => {
           human services. Justin’s goal is to create more responsive, more
           respectful approaches to developing software and web application
           solutions for researchers, evaluators, and policy analysts in the
-          human services and research fields. He holds a master’s degree in economics
+          human services and research fields. <br/> <br/> He holds a master’s degree in economics
           from the University of New Mexico, and a bachelor’s degree in
           economics from the University of St. Thomas.
         </p>
